@@ -2,39 +2,44 @@
 
 A new Flutter project.
 
+## DOC: ESPANOL
+Documentacion:
+   https://flutter.dev/?gclid=CjwKCAjwwL6aBhBlEiwADycBIDsHWPYyi4zDuQ859IfouJ9ircEhILFnI4fla5FQNCLfwIzhXApP1BoCLkAQAvD_BwE&gclsrc=aw.ds
+
+Demo interfaz:
+    https://www.uplabs.com/
+    https://dribbble.com/
+
+Interfaz y codigo: 
+    https://startflutter.com/
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Los widgets básicos son el punto de partida con los que puedes comenzar a crear tus propios widgets (compuestos o más complejos) en Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+Text: representa un texto o cadena de caracteres. Admite diversos parámetros o propiedades, además del texto literal que será mostrado. Podemos definirle estilos y características de apariencia particulares.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Row: permite organizar y posicionar otros widgets hijos en forma de fila o renglón.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Column: permite organizar y posicionar otros widgets hijos en forma de columna.
 
+Stack: permite apilar widgets hijos con respecto al eje Z (elevación) en la interfaz.
 
-# Tutorial
+Container: es uno de los widgets más versátiles de Flutter y permite organizar otros widgets como si fuera una caja o contenedor. Este widget es equivalente a los divs de html y admiten atributos similares de apariencia.
+## example type of widget
 
+StatefulWidget:
+    Drawerggyt
+    FloatingActionButton
 
-## Command line
- flutter create my_app
- cd my_app
- flutter analyze
- flutter test
- flutter run
- flutter run lib/main.dart
- flutter pub get
- flutter pub outdated
- flutter pub upgrade
- flutter doctor
+    Checkbox, Radio, Slider, Form.
 
- - [Doc: Flutter](https://docs.flutter.dev/reference/flutter-cli)
-    
+StatelessWidget:
+    ListView
+    Text
+    CircleAvatar
+    Image
+    Container
+    Row
+    Column
 
-## Arquitecture Software
-
-
-## Example 1 Create List and detail
+    Icono, Texto, Contendor
