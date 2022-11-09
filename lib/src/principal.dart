@@ -27,6 +27,13 @@ class ListExample extends StatefulWidget {
 class _ListExampleState extends State<ListExample> {
   @override
   Widget build(BuildContext context) {
+    final description = Container(
+        margin: const EdgeInsets.only(top: 15, left: 15, right: 15),
+        child: const Text(
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed ligula vel tellus luctus pharetra malesuada a lorem. In cursus, neque at pretium auctor, urna ante viverra arcu, sed elementum libero tortor a dolor. Vestibulum lorem neque, sagittis vel vehicula vitae, condimentum ac est. Sed molestie arcu eu feugiat semper. Fusce nisi diam, tempor a enim ut, vulputate commodo elit. Nam accumsan, nisi id laoreet viverra, quam urna congue mi, vel placerat tellus nisl non elit. Cras sed nisl velit. Quisque lacus nisl, ornare ut lobortis et, auctor a tellus. Nullam a ullamcorper velit. Nam semper pharetra ligula in volutpat. Aenean at ante id purus ultrices sollicitudin. Donec et condimentum orci. Curabitur in porttitor mauris, eget accumsan leo. Donec faucibus orci nec nisl finibus fringilla. Maecenas quis euismod purus. Aliquam varius erat lectus, in lobortis leo gravida tempus.",
+            style: TextStyle(
+                fontSize: 12, fontFamily: 'Oleo', color: Colors.black)));
+
     return Scaffold(
       appBar: AppBar(title: const Text('Actividades')),
       drawer: Drawer(
@@ -69,6 +76,9 @@ class _ListExampleState extends State<ListExample> {
             // amarillo
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Container(
+                  margin: const EdgeInsets.only(top: 200, right: 3.0),
+                  child: description),
               Opinion(
                   "lib/assets/icon.png",
                   "Hola mundo 1",
