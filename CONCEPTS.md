@@ -263,3 +263,27 @@ class _OpinionState extends State<Opinion> {
 ## Drawer menu
 
 https://docs.flutter.dev/cookbook/design/drawer
+
+
+## Add Bloc Provider
+
+```
+Add Lib:
+  flutter_bloc: ^8.0.1
+
+Code
+class AppState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RepositoryProvider(
+        create: (context) => AuthRepository(),
+        child: MultiBlocProvider(providers: [
+          BlocProvider<LoginBloc>(
+              create: (context) => LoginBloc(
+                  authRepository:
+                      RepositoryProvider.of<AuthRepository>(context))),
+        ], child: MyApp2()));
+  }
+}
+
+```
