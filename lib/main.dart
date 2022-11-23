@@ -13,7 +13,7 @@ void main() {
   //Bloc.observer = CounterObserver();
   //runApp(const CounterApp());
 
-  // Example 2
+  // Example 2 .
   runApp(const MyApp());
 }
 
@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
     return const ToDoMaterialApp();
   }
 }
-
 
 /*
 class AppState extends StatelessWidget {
