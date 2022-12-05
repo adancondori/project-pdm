@@ -1,20 +1,24 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_validator/Registro.dart';
+import 'package:flutter_form_validator/diseño_decoracion.dart';
+import 'package:flutter_form_validator/diseño_decoracion.dart';
 
-// screens
-import 'package:antojitos/pantalla_init/screens/main_screen.dart';
-
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Mi perfil',
-        theme: ThemeData(fontFamily: 'OpenSans'),
-        initialRoute: "/main_screen",
-        debugShowCheckedModeBanner: false,
-        routes: <String, WidgetBuilder>{
-          "/main_screen": (BuildContext context) => new Main_screen(),
-        });
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: FormPage(),
+    );
   }
 }
