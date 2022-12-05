@@ -34,9 +34,7 @@ class _FormPageState extends State<FormPage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    "https://www.todofondos.net/wp-content/uploads/700x1136-ancercio-Fondo-de-pantalla-631x1024.jpg"),
-                fit: BoxFit.cover)),
+                image: AssetImage("assets/fondo.jpg"), fit: BoxFit.cover)),
         child: Center(
           child: SingleChildScrollView(
             child: Form(
