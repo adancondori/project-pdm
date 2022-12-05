@@ -229,7 +229,7 @@ Widget _formulariologin() {
     ),
   );
 }
-
+//-------------
 Widget _registrarse() {
   return Transform.translate(
     offset: Offset(0.0, -90.0),
