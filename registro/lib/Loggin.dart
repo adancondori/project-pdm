@@ -16,7 +16,7 @@ class Loggin extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              'Inicio',
+              'Login',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
