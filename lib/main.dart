@@ -6,6 +6,7 @@ import 'package:project_pdm/src/counter/counter_observer.dart';
 import 'package:project_pdm/src/login/bloc/login_bloc.dart';
 import 'package:project_pdm/src/login/ui/screens/login_screen.dart';
 import 'package:project_pdm/src/principal.dart';
+import 'package:project_pdm/src/request_example/screens/ScreenList.dart';
 
 void main() {
   //runApp(const RootApp());
@@ -14,7 +15,7 @@ void main() {
   //runApp(const CounterApp());
 
   // Example 2 .
-  runApp(const MyApp());
+  runApp(HttpMyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -26,6 +27,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class HttpMyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'HTTP',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: PostsPage(),
+    );
+  }
+}
 /*
 class AppState extends StatelessWidget {
   @override
