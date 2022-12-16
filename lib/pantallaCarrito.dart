@@ -1,6 +1,7 @@
-import 'package:antojitos/pantalla_init/carrito/carrito.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'pantalla_init/carrito/carrito.dart';
 
 class PantallaCarrito extends StatefulWidget {
   @override
@@ -49,6 +50,12 @@ class _PantallaCarritoState extends State<PantallaCarrito> {
                                           Container(
                                               child: IconButton(
                                             icon: Icon(Icons.remove),
+                                            onPressed: () {
+                                              setState(() {
+                                                carrito.decrementarCantidadItem(
+                                                    item.id);
+                                              });
+                                            },
                                           )),
                                           Container(
                                               child: Center(
@@ -57,11 +64,21 @@ class _PantallaCarritoState extends State<PantallaCarrito> {
                                           ))),
                                           Container(
                                               child: IconButton(
-                                                  icon: Icon(Icons.remove))),
-                                        ])
+                                            icon: Icon(Icons.add),
+                                            onPressed: () {
+                                              setState(() {
+                                                carrito.incrementarCantidadItem(
+                                                    item.id);
+                                              });
+                                            },
+                                          )),
+                                        ]),
                                   ],
                                 ),
-                              ))
+                              )),
+                              Text(
+                                "Bs/." + carrito.montoTotal.toString(),
+                              )
                             ],
                           ),
                         )

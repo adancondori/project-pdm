@@ -1,8 +1,10 @@
-import 'package:antojitos/pantallaCarta.dart';
-import 'package:antojitos/pantalla_init/carrito/carrito.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
+
+import 'pantallaCarta.dart';
+import 'pantalla_init/carrito/carrito.dart';
 
 void main() => runApp(
       ChangeNotifierProvider(

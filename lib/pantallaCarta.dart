@@ -1,8 +1,10 @@
-import 'package:antojitos/pantallaCarrito.dart';
-import 'package:antojitos/pantalla_init/carrito/carrito.dart';
-import 'package:antojitos/pantalla_init/model/Carta.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'pantallaCarrito.dart';
+import 'pantalla_init/carrito/carrito.dart';
+import 'pantalla_init/model/Carta.dart';
 
 class FavoriteWidget extends StatefulWidget {
   @override

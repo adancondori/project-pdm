@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:antojitos/pantalla_init/model/Item.dart';
+
+import '../model/Item.dart';
 
 class Carrito extends ChangeNotifier {
   Map<String, Item> _items = {};
@@ -44,41 +45,42 @@ class Carrito extends ChangeNotifier {
               imagen: imagen,
               cantidad: cantidad));
     }
-    void removerItem(String producto_id) {
+  }
+
+  void removerItem(String producto_id) {
+    _items.remove(producto_id);
+  }
+
+  void incrementarCantidadItem(String producto_id) {
+    if (_items.containsKey(producto_id)) {
+      _items.update(
+          producto_id,
+          (old) => Item(
+              id: old.id,
+              nombre: old.nombre,
+              precio: old.precio,
+              imagen: old.imagen,
+              cantidad: old.cantidad + 1));
+    }
+  }
+
+  void decrementarCantidadItem(String producto_id) {
+    if (!_items.containsKey(producto_id)) return;
+    if (_items[producto_id].cantidad > 1) {
+      _items.update(
+          producto_id,
+          (old) => Item(
+              id: old.id,
+              nombre: old.nombre,
+              precio: old.precio,
+              imagen: old.imagen,
+              cantidad: old.cantidad - 1));
+    } else {
       _items.remove(producto_id);
     }
+  }
 
-    void incrementarCantidadItem(String producto_id) {
-      if (_items.containsKey(producto_id)) {
-        _items.update(
-            producto_id,
-            (old) => Item(
-                id: old.id,
-                nombre: old.nombre,
-                precio: old.precio,
-                imagen: old.imagen,
-                cantidad: old.cantidad + 1));
-      }
-    }
-
-    void decrementarCantidadItem(String producto_id) {
-      if (!_items.containsKey(producto_id)) return;
-      if (_items[producto_id].cantidad > 1) {
-        _items.update(
-            producto_id,
-            (old) => Item(
-                id: old.id,
-                nombre: old.nombre,
-                precio: old.precio,
-                imagen: old.imagen,
-                cantidad: old.cantidad - 1));
-      } else {
-        _items.remove(producto_id);
-      }
-    }
-
-    void removeCarrito() {
-      _items = {};
-    }
+  void removeCarrito() {
+    _items = {};
   }
 }

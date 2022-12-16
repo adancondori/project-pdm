@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 
 class Carta {
   final int id;
