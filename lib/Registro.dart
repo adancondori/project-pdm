@@ -209,7 +209,7 @@ class _FormPageState extends State<FormPage> {
                           return 'Ingrese el numero de telefono';
                         }
                         if (value.length < 8 || value.length > 8) {
-                          return 'telefono no valido';
+                          return 'no valido tiene que tener 8 digitos';
                         }
                         return null;
                       },
@@ -250,7 +250,7 @@ class _FormPageState extends State<FormPage> {
                         }
                         if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
                             .hasMatch(value)) {
-                          return 'valida el email';
+                          return 'email no valido ejemplo@gmail.com';
                         }
                         return null;
                       },
@@ -290,7 +290,12 @@ class _FormPageState extends State<FormPage> {
                           return 'Ingrese la contraseña';
                         }
                         if (value.length < 8 || value.length > 8) {
-                          return 'contraseña no valida';
+                          return 'no valido tiene que tener 8 caracteres';
+                        }
+                        if (!RegExp(
+                                r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~])')
+                            .hasMatch(value)) {
+                          return 'novalido ingrese Mayusculas,caracteres especiales y numeros';
                         }
                         return null;
                       },
@@ -346,7 +351,11 @@ class _FormPageState extends State<FormPage> {
                       },
                     ),
                   ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Container(
+                    padding: EdgeInsets.only(right: 150),
                     child: SizedBox(
                       width: 200,
                       height: 50,
@@ -391,18 +400,22 @@ class _FormPageState extends State<FormPage> {
                     padding: EdgeInsets.symmetric(
                       horizontal: horizontalPadding,
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          '¿Ya tienes una cuenta?',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Text(
-                          'Ingresa aqui...',
-                          style: TextStyle(fontSize: 18, color: Colors.red),
-                        ),
-                      ],
+                    child: Container(
+                      padding: EdgeInsets.only(left: 130),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            '¿Ya tienes una cuenta?',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          Text(
+                            'Ingresa aqui...',
+                            style: TextStyle(fontSize: 18, color: Colors.red),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
