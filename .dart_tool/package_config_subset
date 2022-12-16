@@ -1,7 +1,3 @@
-flutter_form_validator
-2.7
-file:///C:/examen_prueba/registro/
-file:///C:/examen_prueba/registro/lib/
 async
 2.14
 file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/
@@ -86,4 +82,8 @@ flutter_test
 2.17
 file:///C:/src/flutter/packages/flutter_test/
 file:///C:/src/flutter/packages/flutter_test/lib/
+flutter_form_validator
+2.7
+file:///C:/src/login2/project-pdm/
+file:///C:/src/login2/project-pdm/lib/
 2

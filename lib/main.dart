@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_form_validator/Registro.dart';
+import 'package:flutter_form_validator/login2.dart';
 import 'package:flutter_form_validator/diseño_decoracion.dart';
 import 'package:flutter_form_validator/diseño_decoracion.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'PDM-PROYECTO',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
