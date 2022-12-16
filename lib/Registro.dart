@@ -248,11 +248,7 @@ class _FormPageState extends State<FormPage> {
                         if (value.isEmpty) {
                           return 'Ingrese el email';
                         }
-                        if (!RegExp("^[a-zA-Z0-9+_.-]+@gmail.com")
-                            //[a-zA-Z0-9.-]+.[a-z]+
-                            .hasMatch(value)) {
-                          return 'Por favor digite un email valido ejemplo@gmail.com';
-                        }
+
                         if (!RegExp("^[a-zA-Z0-9+_.-]+@gmail.com")
                             .hasMatch(value)) {
                           return 'email no valido ejemplo@gmail.com';
