@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -65,7 +64,9 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
                           icon: Icon(Icons.shopping_cart),
                           onPressed: () {
                             carrito.numeroItems != 0
-                                ? Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext)=>PantallaCarrito()))
+                                ? Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (BuildContext) =>
+                                        PantallaCarrito()))
                                 : SnackBar(
                                     content: Text("Agrega un producto"),
                                   );
@@ -100,7 +101,6 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
             ),
           ],
         ),
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: SafeArea(
           child: ListView(
             children: [
@@ -120,7 +120,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
                           _ofertas(),
 
                           SizedBox(height: 20.0),
-// Contenedor imagenes de oferta
+                          // Contenedor imagenes de oferta
                           Container(
                             padding: EdgeInsets.all(5.0),
                             height: 300.0,

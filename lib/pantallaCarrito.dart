@@ -19,6 +19,10 @@ class _PantallaCarritoState extends State<PantallaCarrito> {
           elevation: 0,
         ),
         body: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/img/fondo.jpg"),
+                    fit: BoxFit.cover)),
             child: carrito.numeroItems == 0
                 ? Center(
                     child: Text("Carrito Vacio"),
@@ -76,12 +80,17 @@ class _PantallaCarritoState extends State<PantallaCarrito> {
                                   ],
                                 ),
                               )),
-                              Text(
-                                "Bs/." + carrito.montoTotal.toString(),
-                              )
                             ],
                           ),
+                        ),
+                      Container(
+                          child: Column(children: <Widget>[
+                        Text("Monto total"),
+                        Text("-------------------"),
+                        Text(
+                          "Bs/." + carrito.montoTotal.toString(),
                         )
+                      ])),
                     ],
                   )),
       );
