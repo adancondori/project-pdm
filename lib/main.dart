@@ -1,23 +1,26 @@
-import 'package:flutter/cupertino.dart';
+import 'package:antojitos/pantallaCarta.dart';
+import 'package:antojitos/pantalla_init/carrito/carrito.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_form_validator/Registro.dart';
-import 'package:flutter_form_validator/diseño_decoracion.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import 'package:provider/provider.dart';
+
+void main() => runApp(
+      ChangeNotifierProvider(
+        create: (context) => Carrito(),
+        child: MyApp(),
+      ),
+    );
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Registro',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: FormPage(),
-    );
+        title: 'Antojitos',
+        theme: ThemeData(fontFamily: 'OpenSans'),
+        initialRoute: "/pantallaCarta",
+        debugShowCheckedModeBanner: false,
+        routes: <String, WidgetBuilder>{
+          "/pantallaCarta": (BuildContext context) => new FavoriteWidget(),
+        });
   }
 }
